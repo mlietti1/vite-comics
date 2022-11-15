@@ -22,6 +22,6 @@ export default {
 
 <style lang="scss">
 
-@use './assets/styles/general.scss';
+@use './styles/general';
 
 </style>

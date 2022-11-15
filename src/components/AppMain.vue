@@ -1,13 +1,14 @@
-<template>
-  <div>M</div>
-</template>
-
 <script>
 export default {
 
 }
 </script>
 
-<style>
+<template>
+  <div>M</div>
+</template>
 
+<style lang="scss" scoped>
+@use '../styles/partials/mixin' as *;
+@use '../styles/partials/variables' as *;
 </style>
