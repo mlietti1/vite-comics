@@ -71,7 +71,7 @@ export default {
           <li
           v-for="(link, index) in menu"
           :key="index">
-            <a :href="link.href">{{link.text}}</a>
+            <a :class="{'active': link.current}" :href="link.href">{{link.text}}</a>
           </li>
         </ul>
       </nav>
@@ -100,14 +100,19 @@ header {
         list-style: none;
         text-transform: uppercase;
         li {
+          margin: 0 1rem;
           a {
             text-decoration: none;
             display: inline-block;
             color: black;
-            padding: 3rem 1rem;
+            padding: 3rem 0;
+            border-bottom: 5px solid transparent;
             &:hover {
               color: $primary-color;
-
+              border-bottom: 5px solid $primary-color;
+            }
+            &.active{
+              border-bottom: 5px solid $primary-color;
             }
           }
         } 
