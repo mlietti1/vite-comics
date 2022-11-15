@@ -104,7 +104,7 @@ export default {
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <a href="#">Sign up now!</a>
+        <a class="button" href="#">Sign up now!</a>
         <nav>
           <h4>follow us</h4>
           <ul>
@@ -176,7 +176,7 @@ footer {
       @include spaceBetween;
       align-items: center;
       height: 100%;
-      a {
+      a.button {
         text-decoration: none;
         color: white;
         text-transform: uppercase;
@@ -202,9 +202,9 @@ footer {
           li {
             margin-left: 1rem;
             a {
-              padding: 0;
-              color: rgba(255, 255, 255, 0.4);
-              border: none;
+              &:hover {
+                filter: brightness(1.5);
+              }
               img {
                 width: 36px;
               }
