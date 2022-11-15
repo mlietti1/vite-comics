@@ -3,6 +3,11 @@
   justify-content: space-between;
 }
 
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
 @mixin centerFlex($type: 'both') {
   display: flex;
 
