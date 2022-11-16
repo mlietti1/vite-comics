@@ -97,9 +97,6 @@ export default {
             </ul>
           </nav>
         </div>
-        <div class="logo-bg">
-          <img src="../assets/img/dc-logo-bg.png" alt="logo">
-        </div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -127,47 +124,43 @@ export default {
 
 footer {
 
-  background-image: url('../assets/img/footer-bg.jpg');
   .footer-top {
-  
-  height: 370px;
-  padding: 1rem 0;
-  overflow: hidden;
-  .cols{
-    @include flexCol;
-    position: relative;
-    height: 100%;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    .links {
-      margin-right: 30px;
-      h4 {
-        text-transform: uppercase;
-        color: white;
-        font-size: 1.2rem;
-        margin: 1rem 0;
-      }
-      ul {
-        list-style: none;
-        li {
-          a {
-            text-decoration: none;
-            color: rgba(255, 255, 255, 0.4);
-            text-transform: capitalize;
-            &:hover {
-              color: white;
+    background-image: url('../assets/img/footer-bg.jpg');
+    background-size: cover;
+    height: 370px;
+    overflow: hidden;
+    .cols{
+      @include flexCol;
+      padding: 1rem 0;
+      background-image: url("../assets/img/dc-logo-bg.png");
+      background-position: right;
+      background-repeat: no-repeat;
+      height: 100%;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      .links {
+        margin-right: 30px;
+        h4 {
+          text-transform: uppercase;
+          color: white;
+          font-size: 1.2rem;
+          margin: 1rem 0;
+        }
+        ul {
+          list-style: none;
+          li {
+            a {
+              text-decoration: none;
+              color: rgba(255, 255, 255, 0.4);
+              text-transform: capitalize;
+              &:hover {
+                color: white;
+              }
             }
           }
         }
       }
     }
-    .logo-bg {
-      position: absolute;
-      right: 0;
-      transform: translateY(50%);
-      bottom: 50%;
-    }
-  }
 }
   .footer-bottom {
     height: 110px;

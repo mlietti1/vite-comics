@@ -75,6 +75,9 @@ main {
       justify-content: space-evenly;
       list-style: none;
       li {
+        &:last-of-type img{
+          height: 35px;
+        }
         a {
           color: white;
           text-decoration: none;
@@ -87,9 +90,6 @@ main {
             vertical-align: middle;
             height: 55px;
             margin-right: 10px;
-          }
-          img[src="/src/assets/img/buy-dc-power-visa.svg"] {
-            height: 35px;
           }
         }
       }
