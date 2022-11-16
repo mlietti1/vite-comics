@@ -48,9 +48,10 @@ export default {
     right: 0;
     top: 15px;
     display: inline-block;
-    opacity: 10%;
+    opacity: 0%;
     padding: 4px 12px;
     background-color: red;
+    transition: all 0.6s;
   }
 }
 
