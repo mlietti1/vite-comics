@@ -1,11 +1,17 @@
 <script>
 
-import menu from '../data/buyLinks' 
+import menu from '../data/buyLinks';
+import cards from '../data/cardsData';
+import AppCard from './AppCard.vue';
 
 export default {
   name: 'AppMain',
+  components: {
+    AppCard
+  },
   data(){
     return{
+      cards,
       menu
     }
   }
@@ -14,7 +20,15 @@ export default {
 
 <template>
   <main>
-    <div class="content container">Content</div>
+    <div class="jumbo">
+    </div>
+    <div class="content container">
+      <h2 class="content-title">Current series</h2>
+      <div class="cards-row">
+        <AppCard v-for="(item, index) in cards" :key="index" :card="item" />
+      </div>
+      <div class="btn-row"><a class="btn-load" href="#">load more</a></div>
+    </div>
     <div class="buy">
       <div class="container">
         <nav>
@@ -37,8 +51,40 @@ export default {
 @use '../styles/partials/variables' as *;
 
 main {
+  .jumbo {
+    background-image: url('../assets/img/jumbotron.jpg');
+    height: 400px;
+    background-size: cover;
+  }
   .content {
-    padding: 30px 0;
+    position: relative;
+    padding: 20px 0;
+    .content-title {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateY(-50%);
+      text-transform: uppercase;
+      background-color: $primary-color;
+      padding: 8px 20px;
+    }
+    .cards-row {
+      @include centerFlex('horizontal');
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .btn-row {
+      width: 100%;
+      text-align: center;
+      .btn-load {
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 8px 50px;
+        background-color: $primary-color;
+        color: white;
+        font-weight: 700;
+      }
+    }
   }
   background-color: #1c1c1c;
   color: white;
@@ -49,7 +95,7 @@ main {
     height: 155px;
     ul {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
       li {
         &:last-of-type img{
           height: 35px;

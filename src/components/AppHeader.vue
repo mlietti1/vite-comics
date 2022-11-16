@@ -53,6 +53,7 @@ header {
         li {
           margin: 0 1rem;
           a {
+            font-weight: 700;
             display: inline-block;
             color: black;
             padding: 3rem 0;
