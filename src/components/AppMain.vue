@@ -1,35 +1,12 @@
 <script>
+
+import menu from '../data/buyLinks' 
+
 export default {
   name: 'AppMain',
   data(){
     return{
-      menu: [
-        {
-          imgPath: '/src/assets/img/buy-comics-digital-comics.png',
-          text: 'digital comics',
-          href: '#'
-        },
-        {
-          imgPath: '/src/assets/img/buy-comics-merchandise.png',
-          text: 'dc merchandise',
-          href: '#'
-        },
-        {
-          imgPath: '/src/assets/img/buy-comics-subscriptions.png',
-          text: 'subscription',
-          href: '#'
-        },
-        {
-          imgPath: '/src/assets/img/buy-comics-shop-locator.png',
-          text: 'comic shop locator',
-          href: '#'
-        },
-        {
-          imgPath: '/src/assets/img/buy-dc-power-visa.svg',
-          text: 'dc power visa',
-          href: '#'
-        }
-      ]
+      menu
     }
   }
 }
@@ -73,7 +50,6 @@ main {
     ul {
       display: flex;
       justify-content: space-evenly;
-      list-style: none;
       li {
         &:last-of-type img{
           height: 35px;

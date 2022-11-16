@@ -1,60 +1,12 @@
 <script>
+
+import menu from '../data/headerLinks'
+
 export default {
   name: 'AppHeader',
   data(){
     return{
-      menu: [
-        {
-          text:'Characters',
-          href: '#',
-          current: false
-        },
-        {
-          text:'Comics',
-          href: '#',
-          current: true
-        },
-        {
-          text:'Movies',
-          href: '#',
-          current: false
-        },
-        {
-          text:'TV',
-          href: '#',
-          current: false
-        },
-        {
-          text:'Games',
-          href: '#',
-          current: false
-        },
-        {
-          text:'Collectibles',
-          href: '#',
-          current: false
-        },
-        {
-          text:'Videos',
-          href: '#',
-          current: false
-        },
-        {
-          text:'Fans',
-          href: '#',
-          current: false
-        },
-        {
-          text:'News',
-          href: '#',
-          current: false
-        },
-        {
-          text:'Shop',
-          href: '#',
-          current: false
-        }
-      ]
+      menu
     }
   }
 }
@@ -97,12 +49,10 @@ header {
     nav {
       ul {
         @include centerFlex('vertical');
-        list-style: none;
         text-transform: uppercase;
         li {
           margin: 0 1rem;
           a {
-            text-decoration: none;
             display: inline-block;
             color: black;
             padding: 3rem 0;

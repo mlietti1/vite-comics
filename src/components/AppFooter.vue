@@ -1,35 +1,12 @@
 <script>
+
+import menu from '../data/socialLinks'
+
 export default {
   name: 'AppFooter',
   data(){
     return{
-      menu: [
-        {
-          text: 'Facebook',
-          iconName: 'footer-facebook.png',
-          href: '#'
-        },
-        {
-          text: 'Twitter',
-          iconName: 'footer-twitter.png',
-          href: '#'
-        },
-        {
-          text: 'YouTube',
-          iconName: 'footer-youtube.png',
-          href: '#'
-        },
-        {
-          text: 'Pinterest',
-          iconName: 'footer-pinterest.png',
-          href: '#'
-        },
-        {
-          text: 'Periscope',
-          iconName: 'footer-periscope.png',
-          href: '#'
-        },
-      ]
+      menu
     }
   },
   methods:{
@@ -147,10 +124,8 @@ footer {
           margin: 1rem 0;
         }
         ul {
-          list-style: none;
           li {
             a {
-              text-decoration: none;
               color: rgba(255, 255, 255, 0.4);
               text-transform: capitalize;
               &:hover {
@@ -170,7 +145,6 @@ footer {
       align-items: center;
       height: 100%;
       a.button {
-        text-decoration: none;
         color: white;
         text-transform: uppercase;
         display: inline-block;
@@ -190,7 +164,6 @@ footer {
           line-height: 36px;
         }
         ul {
-          list-style: none;
           display: flex;
           li {
             margin-left: 1rem;
