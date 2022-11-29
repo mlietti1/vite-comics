@@ -11,7 +11,7 @@ export default {
 <template>
   <div class="card">
     <div class="card-img">
-      <img :src="card.thumb" alt="card.series">
+      <img :src="card.thumb" :alt="card.series">
     </div>
     <span>{{card.series}}</span>
     <span class="price">{{card.price}}</span>
